@@ -1,0 +1,9 @@
+.popup__information {
+    box-sizing: border-box;
+    position: relative;
+    max-width: 430px;
+    max-height: 330px;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 0 25px 0 rgba(0, 0, 0, .15);
+}

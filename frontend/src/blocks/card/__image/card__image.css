@@ -1,0 +1,10 @@
+.card__image {
+    padding: 0;
+    margin: 0;
+    max-width: 282px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    max-height: 282px;
+    min-height: 282px;
+    cursor: pointer;
+}

@@ -1,0 +1,7 @@
+.popup__state {
+    display: flex;
+    margin: 60px auto 0;
+    height: 120px;
+    width: 120px;
+    align-self: center;
+}
