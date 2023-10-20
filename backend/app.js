@@ -4,9 +4,11 @@ const mongoose = require('mongoose');
 
 const { PORT = 3000 } = process.env;
 const app = express();
+app.use(cors());
 const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
 const { errors } = require('celebrate');
+const cors = require('cors');
 const auth = require('./middlewares/auth');
 const ErrorNotFound = require('./errors/notfound');
 
