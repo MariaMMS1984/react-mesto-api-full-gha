@@ -9,7 +9,7 @@ const ErrorConflict = require('../errors/repeat');
 const JWT_SECRET = 'secret';
 
 const getJwtToken = (id) => {
-  const token = jwt.sign({ payload: id }, process.env.NODE_ENV === 'production' ? JWT_SECRET : 'dev-secret', { expiresIn: '7d' });
+  const token = jwt.sign({ payload: id }, JWT_SECRET, { expiresIn: '7d' });
   return token;
 };
 
