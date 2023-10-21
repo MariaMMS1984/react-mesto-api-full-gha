@@ -56,12 +56,14 @@ const login = (req, res, next) => {
   User.findUserByCredentials(email, password)
     .then((user) => {
       const token = getJwtToken(user._id);
-      res
-        .cookie('jwt', token, {
-          maxage: 3600000 * 24 * 7,
-          httpOnly: true,
-        })
-        .send({ message: 'Успешная авторизация.' });
+      // res
+      // .cookie('jwt', token, {
+      // maxage: 3600000 * 24 * 7,
+      // httpOnly: true,
+      // })
+      // .send({ message: 'Успешная авторизация.' });
+
+      res.status(200).send({ token });
     })
     .catch(next);
 };
