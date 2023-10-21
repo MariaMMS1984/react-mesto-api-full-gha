@@ -9,8 +9,8 @@
 
 ## Ссылки на проект
 
-IP-адрес x.x.x.x
+IP-адрес 158.160.43.176
 
-Frontend https://...
+Frontend https://mms1984.nomoredomainsrocks.ru
 
-Backend https://...
+Backend https://api.mms1984.nomoredomainsrocks.ru

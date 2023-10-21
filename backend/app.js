@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require('express');
 
 const mongoose = require('mongoose');
@@ -13,10 +14,11 @@ const { errors } = require('celebrate');
 const auth = require('./middlewares/auth');
 const ErrorNotFound = require('./errors/notfound');
 const { requestLogger, errorLogger } = require('./middlewares/logger');
+const { DB } = require('./config');
 
 app.use(cookieParser());
 
-mongoose.connect('mongodb://127.0.0.1:27017/mestodb', {
+mongoose.connect(DB, {
   useNewUrlParser: true,
 });
 
@@ -28,6 +30,11 @@ const {
 const { validateCreateUser, validateLogin } = require('./middlewares/validate');
 
 app.use(requestLogger);
+app.get('/crash-test', () => {
+  setTimeout(() => {
+    throw new Error('Сервер сейчас упадёт');
+  }, 0);
+});
 app.post('/signin', validateLogin, login);
 app.post('/signup', validateCreateUser, createUser);
 app.use(auth);
