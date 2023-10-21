@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require('express');
 
 const mongoose = require('mongoose');
@@ -12,6 +13,7 @@ const cookieParser = require('cookie-parser');
 const { errors } = require('celebrate');
 const auth = require('./middlewares/auth');
 const ErrorNotFound = require('./errors/notfound');
+const { requestLogger, errorLogger } = require('./middlewares/logger');
 
 app.use(cookieParser());
 
@@ -26,11 +28,18 @@ const {
 } = require('./controllers/users');
 const { validateCreateUser, validateLogin } = require('./middlewares/validate');
 
+app.use(requestLogger);
+app.get('/crash-test', () => {
+  setTimeout(() => {
+    throw new Error('Сервер сейчас упадёт');
+  }, 0);
+});
 app.post('/signin', validateLogin, login);
 app.post('/signup', validateCreateUser, createUser);
 app.use(auth);
 app.use('/', require('./routes/index'));
 
+app.use(errorLogger);
 app.use(errors());
 app.use((req, res, next) => {
   next(new ErrorNotFound('Такой страницы не существует.'));

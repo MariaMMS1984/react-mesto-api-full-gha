@@ -5,7 +5,7 @@ function checkResponse(res) {
     return Promise.reject(res.status);
 }
 
-export const BASE_URL = "http://localhost:3000";
+export const BASE_URL = "https://api.mms1984.nomoredomainsrocks.ru";
 
 export function registerUser(email, password) {
     return fetch(`${BASE_URL}/signup`, {

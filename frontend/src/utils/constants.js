@@ -45,7 +45,7 @@ const popupElems = document.querySelectorAll('.popup');
 const cardConteinerSelector = document.querySelector(".elements");
 const templateSelector = "#cards__template";
 const token = 'd006c78b-efd3-4cba-bbbb-e659c9b51ae0';
-const url = 'http://localhost:3000/';
+const url = 'https://api.mms1984.nomoredomainsrocks.ru/';
 const avatarEdit = document.querySelector('.profile__avatar-edit');
 
 const avatarPopup = document.querySelector('.avatarpopup');
