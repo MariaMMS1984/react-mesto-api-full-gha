@@ -73,18 +73,14 @@ function App() {
 
   useEffect(() => {
     if (isLoggedIn === true) {
-      navigate("/");
+      Promise.all([api.getUserData(), api.getInitialCards()]).then(([user, cards]) => {
+        setCurrentUser(user);
+        setCards(cards);
+      }).catch((err) => {
+        console.error(err);
+      });
     }
-  }, [isLoggedIn, navigate]);
-
-  useEffect(() => {
-    Promise.all([api.getUserData(), api.getInitialCards()]).then(([user, cards]) => {
-      setCurrentUser(user);
-      setCards(cards);
-    }).catch((err) => {
-      console.error(err);
-    });
-  }, []);
+  }, [isLoggedIn]);
 
   useEffect(() => {
     api
