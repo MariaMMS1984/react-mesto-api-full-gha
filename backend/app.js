@@ -30,7 +30,6 @@ const {
 const { validateCreateUser, validateLogin } = require('./middlewares/validate');
 
 app.use(requestLogger);
-
 app.post('/signin', validateLogin, login);
 app.post('/signup', validateCreateUser, createUser);
 app.use(auth);
