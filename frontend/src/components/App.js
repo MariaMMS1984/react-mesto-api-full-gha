@@ -64,12 +64,13 @@ function App() {
         if (res) {
           setIsLoggedIn(true);
           setEmailName(res.email);
+          navigate("/");
         }
       }).catch((err) => {
         console.error(err);
       });
     }
-  }, []);
+  }, [navigate]);
 
   useEffect(() => {
     if (isLoggedIn === true) {
