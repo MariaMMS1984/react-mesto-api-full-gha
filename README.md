@@ -22,7 +22,7 @@ Backend https://api.mms1984.nomoredomainsrocks.ru
 ## Стек технологий:
 - HTML5;
 - CSS;
-### адаптивная верстка;
+- адаптивная верстка;
 ### Flexbox;
 ### Grid;
 ### JavaScript;
