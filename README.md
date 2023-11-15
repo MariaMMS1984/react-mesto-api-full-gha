@@ -17,7 +17,7 @@ Backend https://api.mms1984.nomoredomainsrocks.ru
 
 1. Клонируйте проект на свой компьютер:
 
-git clone 
+git clone git@github.com:MariaMMS1984/react-mesto-api-full-gha.git
 
 2. Установите зависимости:
 
