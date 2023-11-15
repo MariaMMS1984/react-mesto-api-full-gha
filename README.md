@@ -20,8 +20,8 @@ Backend https://api.mms1984.nomoredomainsrocks.ru
 открытие полноразмерных фотографий карточек.
 
 ## Стек технологий:
-- HTML5;
-- CSS;
+### HTML5;
+### CSS;
 адаптивная верстка;
 Flexbox;
 Grid;
