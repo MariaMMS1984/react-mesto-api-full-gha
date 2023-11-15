@@ -40,11 +40,11 @@ npm run build.
 ## Стек технологий:
 - HTML5;
 - CSS:
-   Flexbox,
-  Grid Layout,
-  Positioning,
-  Adaptive UI,
-  Media Queries;
+   flexbox,
+  grid Layout,
+  positioning,
+  adaptive UI,
+  media Queries;
 - JavaScript;
 - React (функциональные компоненты и хуки);
 - Webpack;
